@@ -1,0 +1,12 @@
+# https://taktile.com/ llms.txt
+
+- [Trusted AI Decision Platform](https://taktile.com): Combine AI speed with human oversight for secure approvals.
+- [AI-Driven Claims Transformation](https://taktile.com/articles/rhino-jetty-and-taktile): Rhino and Jetty enhance claims operations with Taktile's AI.
+- [Contact Taktile Team](https://taktile.com/contact): Reach out for support, sales, or partnership inquiries.
+- [Credit Solution Inquiry](https://taktile.com/credit-solution): Submit your details for Taktile's credit solutions.
+- [Taktile Series B Funding](https://taktile.com/articles/taktile-raises-54m-series-b): Taktile raises $54 million to enhance financial decision-making solutions.
+- [Taktile Sitemap Overview](https://www.taktile.com/sitemap.xml): Explore Taktile's comprehensive sitemap for easy navigation.
+- [Brazil's Fintech Innovations](https://taktile.com/articles/brazil-top-25-of-2025): Explore Brazil's top fintech innovators shaping 2025 landscape.
+- [Companies House API Overview](https://taktile.com/references/companies-house): Access company data for KYB and onboarding processes.
+- [Taktile Privacy Policy](https://taktile.com/privacy-policy): Learn how Taktile collects and processes your personal data.
+- [Security Governance Overview](https://taktile.com/security-governance): Comprehensive security practices for protecting customer data.

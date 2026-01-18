@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Delula Design System - Dark theme with neon purple accents */
+/* All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Dark charcoal backgrounds */
+    --background: 230 15% 8%;
+    --foreground: 220 20% 95%;
+
+    /* Glass panel surfaces */
+    --card: 230 15% 12%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 230 15% 14%;
+    --popover-foreground: 220 20% 95%;
+
+    /* Neon purple primary */
+    --primary: 280 85% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary muted purple */
+    --secondary: 280 40% 20%;
+    --secondary-foreground: 280 20% 90%;
+
+    /* Muted elements */
+    --muted: 230 15% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    /* Accent purple/magenta gradient base */
+    --accent: 300 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive red */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 230 15% 20%;
+    --input: 230 15% 16%;
+    --ring: 280 85% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for Delula */
+    --glass-border: 280 30% 25%;
+    --glass-glow: 280 85% 60%;
+    --surface: 230 15% 10%;
+    --surface-elevated: 230 15% 14%;
+    
+    /* Status colors */
+    --success: 145 70% 45%;
+    --warning: 45 90% 55%;
+    --info: 200 80% 55%;
+
+    /* Sidebar */
+    --sidebar-background: 230 15% 10%;
+    --sidebar-foreground: 220 20% 85%;
+    --sidebar-primary: 280 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 280 40% 20%;
+    --sidebar-accent-foreground: 280 20% 90%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 280 85% 60%;
+  }
+
+  .dark {
+    --background: 230 15% 8%;
+    --foreground: 220 20% 95%;
+    --card: 230 15% 12%;
+    --card-foreground: 220 20% 95%;
+    --popover: 230 15% 14%;
+    --popover-foreground: 220 20% 95%;
+    --primary: 280 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 280 40% 20%;
+    --secondary-foreground: 280 20% 90%;
+    --muted: 230 15% 18%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 300 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 230 15% 20%;
+    --input: 230 15% 16%;
+    --ring: 280 85% 60%;
+    --sidebar-background: 230 15% 10%;
+    --sidebar-foreground: 220 20% 85%;
+    --sidebar-primary: 280 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 280 40% 20%;
+    --sidebar-accent-foreground: 280 20% 90%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 280 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: 
+      radial-gradient(ellipse at 50% 0%, hsl(280 60% 15% / 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse at 0% 100%, hsl(280 80% 10% / 0.2) 0%, transparent 40%),
+      radial-gradient(ellipse at 100% 100%, hsl(300 60% 10% / 0.2) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  /* Glass panel effect */
+  .glass-panel {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-xl;
+    box-shadow: 
+      0 0 0 1px hsl(var(--glass-border) / 0.3),
+      0 8px 32px -8px hsl(230 15% 5% / 0.5),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.03);
+  }
+
+  /* Glowing border effect */
+  .glow-border {
+    box-shadow: 
+      0 0 0 1px hsl(var(--glass-glow) / 0.2),
+      0 0 20px -5px hsl(var(--glass-glow) / 0.3);
+  }
+
+  /* Purple gradient for buttons/accents */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(280 85% 55%) 0%, hsl(300 80% 50%) 100%);
+  }
+
+  /* Subtle noise texture */
+  .noise-overlay {
+    position: relative;
+  }
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* Progress bar gradient */
+  .progress-gradient {
+    background: linear-gradient(90deg, hsl(280 85% 55%) 0%, hsl(320 80% 55%) 50%, hsl(280 85% 55%) 100%);
+  }
+
+  /* Score ring gradient */
+  .score-ring {
+    background: conic-gradient(
+      from 180deg,
+      hsl(280 85% 55%) 0%,
+      hsl(300 80% 50%) 50%,
+      hsl(320 75% 55%) 100%
+    );
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
