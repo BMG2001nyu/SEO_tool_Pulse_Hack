@@ -44,28 +44,33 @@ export function BrokenLinksChart({ totalLinks = 0, brokenLinks = 0, healthScore 
             />
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-2xl font-bold text-foreground">{score}</span>
-            <span className="text-[10px] text-muted-foreground">%scrls</span>
+            <span className="text-2xl font-bold text-foreground">{score}%</span>
+            <span className="text-[10px] text-muted-foreground">Health</span>
           </div>
         </div>
       </div>
 
       <div className="flex justify-center gap-6 mt-2 text-xs">
         <div className="text-center">
-          <span className="text-muted-foreground">90%</span>
+          <span className="text-foreground font-medium">{totalLinks}</span>
           <br />
-          <span className="text-muted-foreground">Health</span>
+          <span className="text-muted-foreground">Total Links</span>
+        </div>
+        <div className="text-center">
+          <span className="text-foreground font-medium">{brokenLinks}</span>
+          <br />
+          <span className="text-muted-foreground">Broken</span>
         </div>
       </div>
 
       <div className="flex justify-center gap-4 mt-3 text-xs">
         <div className="flex items-center gap-1">
-          <span className="w-2 h-2 rounded-full bg-destructive" />
-          <span className="text-muted-foreground">Broken</span>
+          <span className="w-2 h-2 rounded-full bg-primary" />
+          <span className="text-muted-foreground">Healthy</span>
         </div>
         <div className="flex items-center gap-1">
-          <span className="w-2 h-2 rounded-full bg-primary" />
-          <span className="text-muted-foreground">Links</span>
+          <span className="w-2 h-2 rounded-full bg-destructive" />
+          <span className="text-muted-foreground">Broken</span>
         </div>
       </div>
     </div>

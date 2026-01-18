@@ -104,9 +104,11 @@ interface ReportViewerPanelProps {
   auditUrl?: string | null;
   auditData?: AuditData | null;
   auditStatus?: AuditStatusResponse | null;
+  onDownloadReport?: () => void;
+  onExportJson?: () => void;
 }
 
-export function ReportViewerPanel({ auditUrl, auditData, auditStatus }: ReportViewerPanelProps) {
+export function ReportViewerPanel({ auditUrl, auditData, auditStatus, onDownloadReport, onExportJson }: ReportViewerPanelProps) {
   // Extract domain from URL for display
   const displayUrl = auditUrl ? (() => {
     try {
@@ -219,6 +221,7 @@ export function ReportViewerPanel({ auditUrl, auditData, auditStatus }: ReportVi
           size="sm"
           className="gap-2 border-primary/50 text-primary hover:bg-primary/10"
           disabled={!auditData}
+          onClick={onDownloadReport}
         >
           <Download className="w-4 h-4" />
           Download Report
@@ -432,6 +435,7 @@ export function ReportViewerPanel({ auditUrl, auditData, auditStatus }: ReportVi
           size="sm"
           className="gap-2 border-primary/50 text-primary hover:bg-primary/10"
           disabled={!auditData}
+          onClick={onExportJson}
         >
           <Download className="w-4 h-4" />
           Export JSON

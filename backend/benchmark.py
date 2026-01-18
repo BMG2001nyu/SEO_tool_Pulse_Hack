@@ -14,11 +14,16 @@ from openai import OpenAI
 
 
 DEFAULT_QUERIES = [
-    "What services do you offer?",
-    "What is your pricing?",
+    "What does your company do?",
+    "Who is your target customer?",
+    "What are your main products or services?",
+    "How much does it cost?",
+    "How can I contact you?",
     "Where are you located?",
     "What are your business hours?",
-    "Do you offer refunds or a money-back guarantee?",
+    "Do you offer refunds, cancellations, or guarantees?",
+    "Do you have customer testimonials or case studies?",
+    "What makes you different from competitors?",
 ]
 
 
